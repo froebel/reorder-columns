@@ -40,7 +40,7 @@ If you miss anything, please feel free to add it and let me know.
 ## Caveats
 - For the whole process, the table has to be taken offline.
 - There will be issues if you select all columns (SELECT * FROM Foo) and access the columns via index (you should not do this anyway!)
-- If you use sql-features, that are not yet supported by this script, these will be lost. E.g. during development remembered to recreate views, but forgot about indexes on the views.
+- If you use sql-features, that are not yet supported by this script, these will be lost. E.g. during development of htis script, we remembered to recreate the views, but forgot about indexes on the views.
 
 ## Versions of Sql-Server
 Currently, this is only tested in SqlServer 2008 R2. Please feel free to let me know if it works in other versions as well - or provide a patch that makes it work.
