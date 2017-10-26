@@ -27,19 +27,19 @@ CREATE VIEW vBooksWithAuthors WITH SCHEMABINDING AS
 		INNER JOIN dbo.Authors ON Authors.Id = Books.AuthorID
 GO
 CREATE UNIQUE CLUSTERED INDEX ucivBooksWithAuthorsBookID ON vBooksWithAuthors(BookID)
---Insert at least some data.
 
+--Insert at least some data.
 INSERT Authors (Name) VALUES ('Douglas Adams')
 INSERT Books (Title, Pages, AuthorID) VALUES ('The Hitchhiker''s Guide to the Galaxy', 205, 1)
 INSERT BooksRented (BookID, Customer) VALUES(1, 'Arthur Dent')
 
---ResultSet1: Show the new order of columns.
+--ResultSet1: Show the old order of columns.
 SELECT * FROM Books
 
 --ResultSet2: Output from pReorderColumns to show the changes that are made.
 EXEC pReorderColumns @table = 'Books', @newOrder = 'ID, Title, AuthorID, Pages'
 
---ResultSet3: Show the new order or columns.
+--ResultSet3: Show the new order of columns.
 SELECT * FROM Books
 
 ROLLBACK TRAN
