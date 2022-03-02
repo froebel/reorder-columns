@@ -17,10 +17,10 @@ You can find an example in Example.sql.
 - All relations to other tables and views are created again.
 
 ## Supported features
-- All types of columns
-  - Identity-columns (only of type (1,1))
-  - Default-constraints
-  - Check-constraints
+- All data-types of columns
+  - Identity-columns (but only of type (1,1))
+- Default-constraints
+- Check-constraints
 - Foreign keys
   - Incoming from other tables
   - Outgoing to other tables
@@ -39,8 +39,8 @@ If you miss anything, please feel free to add it and let me know.
 
 ## Caveats
 - For the whole process, the table has to be taken offline.
-- There will be issues if you select all columns (SELECT * FROM Foo) and access the columns via index (you should not do this anyway!)
-- If you use sql-features, that are not yet supported by this script, these will be lost. E.g. during development of this script, we remembered to recreate the views, but forgot about indexes on the views.
+- If you use "SELECT * FROM", the order of columns does change of course. So check your code!
+- If you use sql-features, that are not yet supported by this script, they will probably be lost during execution. So please check you schema after running the script.
 
 ## Versions of Sql-Server
-Currently, this is only tested in SqlServer 2008 R2. Please feel free to let me know if it works in other versions as well - or provide a patch that makes it work.
+Currently, this is tested in SqlServer 2017. Please feel free to let me know if it works in other versions as well - or provide a patch that makes it work.
