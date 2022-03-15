@@ -43,4 +43,4 @@ If you miss anything, please feel free to add it and let me know.
 - If you use sql-features, that are not yet supported by this script, they will probably be lost during execution. So please check you schema after running the script.
 
 ## Versions of Sql-Server
-Currently, this is tested in SqlServer 2017. Please feel free to let me know if it works in other versions as well - or provide a patch that makes it work.
+Currently, this is tested in SqlServers 2016, 2017 and 2019. Please feel free to let me know if it works in other versions as well - or provide a patch that makes it work.
